@@ -1,38 +1,69 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    font-size: 72px;
+    color: tomato;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 50px 300px 50px 300px;
+    border: 2px solid #003865;
+    border-radius: 50px;
+    background-color: #003865;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+    border: none;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 16px;
+    margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnForm {
+    padding: 15px 30px 15px 30px;
+    margin-left: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: tomato;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 50px 300px 50px 300px;
+    border: 2px solid #d4f6cc;
+    border-radius: 10px;
+    background-color: #d4f6cc;
+}
+
+.todo:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.btnList {
+    padding: 10px 20px 10px 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: tomato;
+    color: aliceblue;
+    font-weight: 600;
 }
