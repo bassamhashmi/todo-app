@@ -31,6 +31,10 @@ input {
     margin-left: 20px;
 }
 
+input:focus {
+    background-color: antiquewhite;
+}
+
 .btnForm {
     padding: 15px 30px 15px 30px;
     margin-left: 20px;

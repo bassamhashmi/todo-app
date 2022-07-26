@@ -21,12 +21,12 @@ const TodoList = ({ data }) => {
 
         if (input !== "") {
             setTodoList([
-                ...todoList,
                 {
                     id: todoList.length + 1,
                     task: input.trim(),
-                    complete: false,
+                    done: false,
                 },
+                ...todoList,
             ]);
         }
         setInput("");
@@ -36,9 +36,9 @@ const TodoList = ({ data }) => {
 
     // Edit
     const editClickHandler = (todo) => {
-        ref.current.focus();
         setIsEditing(true);
         setCurrentTodo({ ...todo });
+        ref.current.focus();
     };
 
     const onEditChange = (event) => {
@@ -81,10 +81,12 @@ const TodoList = ({ data }) => {
     return (
         <div className="TDLContainer">
             <h1>Todo App</h1>
+
             {isEditing ? (
                 <form onSubmit={handleEditFormSubmit}>
                     <div>
                         <input
+                            autoFocus
                             name="editTodo"
                             value={currentTodo.task}
                             type="text"
@@ -113,7 +115,6 @@ const TodoList = ({ data }) => {
                         type="text"
                         onChange={changeHandler}
                         placeholder="Enter task to do here..."
-                        ref={ref}
                     />
                     <button type="submit" className="btnForm" style={myStyle}>
                         Add
